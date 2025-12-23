@@ -4,7 +4,7 @@ date: 2014-09-06
 slug: "custom-block-drupal-8"
 summary: "Learn how to create custom blocks in Drupal 8 using the new plugin system and block entities."
 tags: ["drupal", "block", "custom-modules"]
-author: "Sharique Hasan"
+author: "Sharique"
 status: "published"
 seo:
   description: "Complete guide to creating custom blocks in Drupal 8 with the new plugin system"

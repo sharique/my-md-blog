@@ -5,7 +5,7 @@ slug: "drupal-8-site"
 summary: "Recently migrated my site from Drupal 7 to Drupal 8 with a new Foundation-based theme and moved hosting to Digital Ocean for better performance."
 description: "Welcome to my blog!"
 tags: ["Drupal", "DigitalOcean", "Drupal migration"]
-author: "Sharique Hasan"
+author: "Sharique"
 status: "published"
 ---
 
