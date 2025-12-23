@@ -30,7 +30,11 @@ export default defineComponent({
           <h2 class="text-2xl font-bold mb-2">Blog title + {{ post.title }}</h2>
         </NuxtLink>
       </div>
-      <time :datetime="post.date">{{ formattedDate }}</time>
+      <span>
+        On
+        <time :datetime="post.date">{{ formattedDate }}</time>
+        by {{ post.author }}
+      </span>
       <p class="py-4">
         {{ post.summary }}
       </p>

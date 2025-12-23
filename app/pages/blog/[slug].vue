@@ -13,6 +13,20 @@ const formattedDate = computed(() => {
     day: "numeric",
   });
 });
+
+useHead({
+  title: () => post.value?.title || "Content not found",
+  meta: [
+    {
+      name: "description",
+      content: post.value?.seo.description || "No description available",
+    },
+    {
+      name: "keywords",
+      content: post.value?.seo.keywords.join(",") || [],
+    },
+  ],
+});
 </script>
 
 <template>
@@ -21,7 +35,7 @@ const formattedDate = computed(() => {
       <h2 class="text-3xl md:text-4xl font-bold mb-2">{{ post.title }}</h2>
     </div>
     <time :datetime="post.date" class="text-sm text-base-content/70 mb-4 block">
-      {{ formattedDate }}
+      On {{ formattedDate }} by {{ post.author }}
     </time>
     <!-- Render the blog post as Prose & Vue components -->
     <ContentRenderer :value="post" class="prose max-w-none" />
