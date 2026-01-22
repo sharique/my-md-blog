@@ -27,7 +27,7 @@ export default defineComponent({
     <div class="card-body">
       <div class="card-title">
         <NuxtLink :to="post.path">
-          <h2 class="text-2xl font-bold mb-2">Blog title + {{ post.title }}</h2>
+          <h2 class="text-2xl font-bold mb-2">{{ post.title }}</h2>
         </NuxtLink>
       </div>
       <span>
