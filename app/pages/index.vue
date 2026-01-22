@@ -1,20 +1,11 @@
-<script setup lang="ts">
-const { data: posts } = await useAsyncData("blog", () => {
-  return queryCollection("blog").all();
-});
-
-useSeoMeta({
-  title: "Blogs home page",
-  description: "This is my personal blog",
-});
-</script>
-
 <template>
   <div>
-    <ul>
-      <li v-for="post in posts" :key="post.id">
-        <BlogTeaser :post="post" />
-      </li>
-    </ul>
+    <h1 class="text-2xl font-bold mb-2">Welcome to my blogs application</h1>
+    <div class="py-4">
+      <p>
+        Welcome to my blogging applications, powered by Markdown format file. I
+        build it using Vue.js and Nuxt.js framwork.
+      </p>
+    </div>
   </div>
 </template>

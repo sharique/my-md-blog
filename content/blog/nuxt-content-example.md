@@ -4,7 +4,7 @@ date: 2024-12-22
 slug: "nuxt-content-example"
 summary: "Learn how to build a dynamic content management system using Nuxt Content module for creating blogs, documentation, and more."
 tags: ["Nuxt", "Vue", "Content Management", "JAMstack"]
-author: "Sharique Hasan"
+author: "Sharique"
 status: "published"
 url: "/blog/nuxt-content-tutorial"
 seo:
