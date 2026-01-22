@@ -7,7 +7,6 @@ const currentPage = ref(parseInt(route.query.page as string) || 1);
 const { data: posts } = await useAsyncData("blog", () => {
   return queryCollection("blog").all();
 });
-console.log(posts.value);
 const totalPages = Math.ceil(posts.value.length / pageSize);
 
 // Sort posts by date (most recent first) and paginate
@@ -27,7 +26,7 @@ const goToPage = (page: number) => {
 const paginatedItems = computed(() => {
   const start = (currentPage.value - 1) * pageSize;
   const end = start + pageSize;
-  return posts.value.slice(start, end);
+  return sortedPosts.value.slice(start, end);
 });
 
 useSeoMeta({
