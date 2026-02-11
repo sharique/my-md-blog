@@ -1,5 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-  themes: light --default, dark;
+    themes:
+        light --default,
+        dark;
+}
+
+/* === Editorial Typography === */
+@theme {
+    --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Base typography */
+html {
+    font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+}
+
+/* Prose overrides for blog content */
+.prose {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.prose blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    border-left-width: 4px;
+    border-left-color: oklch(0.65 0.12 45);
+}
+
+/* Smooth theme transitions */
+*,
+*::before,
+*::after {
+    transition:
+        background-color 0.3s ease,
+        color 0.2s ease,
+        border-color 0.3s ease;
+}
+
+/* Editorial decorative elements */
+.editorial-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: oklch(0.65 0.05 60);
+}
+
+.editorial-divider::before,
+.editorial-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        oklch(0.75 0.04 60),
+        transparent
+    );
+}
+
+/* Card hover effects */
+.card-editorial {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-editorial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px -8px oklch(0.3 0.03 60 / 0.15);
+}
+
+/* Warm accent bar */
+.accent-bar {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        oklch(0.6 0.15 40),
+        oklch(0.7 0.12 55)
+    );
+    border-radius: 2px;
+}
+
+/* Tag pill style */
+.tag-pill {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background: oklch(0.93 0.03 60);
+    color: oklch(0.4 0.06 50);
+    transition: background 0.2s ease;
+}
+
+.tag-pill:hover {
+    background: oklch(0.88 0.05 55);
+}
+
+[data-theme="dark"] .tag-pill {
+    background: oklch(0.28 0.03 260);
+    color: oklch(0.78 0.04 70);
+}
+
+[data-theme="dark"] .tag-pill:hover {
+    background: oklch(0.32 0.04 255);
+}
+
+[data-theme="dark"] .card-editorial:hover {
+    box-shadow: 0 12px 32px -8px oklch(0.1 0.02 260 / 0.4);
+}
+
+[data-theme="dark"] .editorial-divider {
+    color: oklch(0.55 0.03 260);
+}
+
+[data-theme="dark"] .editorial-divider::before,
+[data-theme="dark"] .editorial-divider::after {
+    background: linear-gradient(
+        to right,
+        transparent,
+        oklch(0.4 0.03 260),
+        transparent
+    );
+}
+
+[data-theme="dark"] .prose blockquote {
+    border-left-color: oklch(0.55 0.1 45);
+}
+
+/* Hero section background */
+.hero-editorial {
+    background: linear-gradient(
+        135deg,
+        oklch(0.95 0.02 70),
+        oklch(0.93 0.03 55),
+        oklch(0.95 0.01 85)
+    );
+    position: relative;
+}
+
+.hero-editorial::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+        oklch(0.8 0.04 55 / 0.15) 1px,
+        transparent 1px
+    );
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .hero-editorial {
+    background: linear-gradient(
+        135deg,
+        oklch(0.2 0.02 260),
+        oklch(0.18 0.03 250),
+        oklch(0.2 0.01 270)
+    );
+}
+
+[data-theme="dark"] .hero-editorial::before {
+    background-image: radial-gradient(
+        oklch(0.35 0.02 260 / 0.2) 1px,
+        transparent 1px
+    );
+}
+
+/* Staggered fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-delay-1 {
+    animation-delay: 0.1s;
+}
+.animate-delay-2 {
+    animation-delay: 0.2s;
+}
+.animate-delay-3 {
+    animation-delay: 0.3s;
+}
+.animate-delay-4 {
+    animation-delay: 0.4s;
+}
+.animate-delay-5 {
+    animation-delay: 0.5s;
 }

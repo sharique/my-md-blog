@@ -12,7 +12,6 @@ const totalPages = computed(() =>
   Math.ceil((posts.value?.length || 0) / pageSize),
 );
 
-// Sort posts by date (most recent first) and paginate
 const sortedPosts = computed(() => {
   if (!posts.value) return [];
   return [...posts.value].sort((a, b) => {
@@ -40,15 +39,26 @@ useSeoMeta({
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold mb-6">Blogs</h1>
+    <div class="accent-bar mb-4 animate-fade-in-up"/>
+    <h1
+      class="text-3xl md:text-4xl font-bold mb-8 animate-fade-in-up"
+      style="font-family: var(--font-serif);"
+    >
+      All Posts
+    </h1>
     <ul class="flex flex-col gap-6">
-      <li v-for="post in paginatedItems" :key="post.id">
+      <li
+        v-for="(post, index) in paginatedItems"
+        :key="post.id"
+        class="animate-fade-in-up"
+        :class="`animate-delay-${Math.min(index + 1, 5)}`"
+      >
         <BlogTeaser :post="post" />
       </li>
     </ul>
 
     <!-- Pagination -->
-    <div v-if="totalPages > 1" class="flex justify-center items-center mt-8 gap-4">
+    <div v-if="totalPages > 1" class="flex justify-center items-center mt-12 gap-4">
       <div class="join">
         <button
           class="join-item btn"
@@ -74,7 +84,10 @@ useSeoMeta({
           Next
         </button>
       </div>
-      <span class="text-sm text-base-content/70">
+      <span
+        class="text-sm text-base-content/60"
+        style="font-family: var(--font-sans);"
+      >
         Page {{ currentPage }} of {{ totalPages }}
       </span>
     </div>

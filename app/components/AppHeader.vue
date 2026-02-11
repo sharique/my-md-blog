@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-200">
+  <div class="navbar bg-base-200/80 backdrop-blur-sm sticky top-0 z-50 border-b border-base-300/50">
     <div class="navbar-start">
       <!-- Mobile dropdown menu -->
       <div class="dropdown">
@@ -21,18 +21,24 @@
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow-lg"
         >
           <li><NuxtLink to="/">Home</NuxtLink></li>
           <li><NuxtLink to="/blog">Blogs</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
         </ul>
       </div>
-      <NuxtLink to="/" class="btn btn-ghost text-xl">My Blog</NuxtLink>
+      <NuxtLink
+        to="/"
+        class="btn btn-ghost text-xl tracking-tight"
+        style="font-family: var(--font-serif); font-weight: 700;"
+      >
+        My Blog
+      </NuxtLink>
     </div>
     <!-- Desktop nav links -->
     <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
+      <ul class="menu menu-horizontal px-1" style="font-family: var(--font-sans);">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/blog">Blogs</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>

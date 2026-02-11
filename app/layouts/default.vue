@@ -8,7 +8,7 @@ import AppFooter from "~/components/AppFooter.vue";
     <AppHeader />
 
     <div class="w-full flex justify-center flex-1">
-      <div class="w-full max-w-[1200px] px-4 py-8">
+      <div class="w-full max-w-[1200px] px-4 py-8 md:py-12">
         <div class="flex flex-col gap-6">
           <slot />
         </div>

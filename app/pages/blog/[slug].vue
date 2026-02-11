@@ -30,24 +30,47 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <div>
-      <h2 class="text-3xl md:text-4xl font-bold mb-2">{{ post.title }}</h2>
-    </div>
-    <time :datetime="post.date" class="text-sm text-base-content/70 mb-4 block">
-      On {{ formattedDate }} by {{ post.author }}
-    </time>
-    <!-- Render the blog post as Prose & Vue components -->
-    <ContentRenderer :value="post" class="prose max-w-none" />
-    <div class="flex flex-wrap items-center gap-2 mt-6">
-      <span class="font-semibold">Tags:</span>
-      <button
-        v-for="tag in post.tags"
-        :key="tag"
-        class="btn btn-sm btn-outline"
+  <article class="animate-fade-in-up">
+    <header class="mb-8">
+      <div class="accent-bar mb-4"/>
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"
+        style="font-family: var(--font-serif);"
       >
-        {{ tag }}
-      </button>
-    </div>
-  </div>
+        {{ post.title }}
+      </h1>
+      <time
+        :datetime="post.date"
+        class="text-sm text-base-content/60 block"
+        style="font-family: var(--font-sans);"
+      >
+        {{ formattedDate }}
+        <span class="mx-1">&middot;</span>
+        {{ post.author }}
+      </time>
+    </header>
+
+    <ContentRenderer :value="post" class="prose max-w-none" />
+
+    <footer class="mt-10">
+      <div class="editorial-divider mb-6">
+        <span/>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <span
+          class="text-sm font-semibold text-base-content/70 mr-1"
+          style="font-family: var(--font-sans);"
+        >
+          Tags:
+        </span>
+        <span
+          v-for="tag in post.tags"
+          :key="tag"
+          class="tag-pill"
+        >
+          {{ tag }}
+        </span>
+      </div>
+    </footer>
+  </article>
 </template>
