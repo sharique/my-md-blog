@@ -1,35 +1,21 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref } from "vue";
+import { usePagination } from "~/composables/usePagination";
+
 const route = useRoute();
-const pageSize = 10;
 const currentPage = ref(parseInt(route.query.page as string) || 1);
 
 const { data: posts } = await useAsyncData("blog", () => {
   return queryCollection("blog").all();
 });
 
-const totalPages = computed(() =>
-  Math.ceil((posts.value?.length || 0) / pageSize),
-);
-
-const sortedPosts = computed(() => {
-  if (!posts.value) return [];
-  return [...posts.value].sort((a, b) => {
-    const dateA = new Date(a.date || 0).getTime();
-    const dateB = new Date(b.date || 0).getTime();
-    return dateB - dateA;
-  });
-});
+const { totalPages, paginatedItems: getPaginatedItems } = usePagination(posts);
+const paginatedItems = getPaginatedItems(currentPage);
 
 const goToPage = (page: number) => {
   currentPage.value = page;
   navigateTo({ query: { page: page.toString() } });
 };
-const paginatedItems = computed(() => {
-  const start = (currentPage.value - 1) * pageSize;
-  const end = start + pageSize;
-  return sortedPosts.value.slice(start, end);
-});
 
 useSeoMeta({
   title: "Blogs home page",

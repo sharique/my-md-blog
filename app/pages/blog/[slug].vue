@@ -1,18 +1,12 @@
 <script setup>
+import { formatDate } from "~/utils/formatDate";
+
 const slug = useRoute().params.slug;
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
   return queryCollection("blog").path(`/blog/${slug}`).first();
 });
 
-const formattedDate = computed(() => {
-  if (!post.value?.date) return "";
-  const date = new Date(post.value.date);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-});
+const formattedDate = computed(() => formatDate(post.value?.date));
 
 useHead({
   title: () => post.value?.title || "Content not found",

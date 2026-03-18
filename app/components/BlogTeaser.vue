@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { formatDate } from "~/utils/formatDate";
+
 const props = defineProps<{
   post: {
     id: string;
@@ -11,15 +13,7 @@ const props = defineProps<{
   };
 }>();
 
-const formattedDate = computed(() => {
-  if (!props.post.date) return "";
-  const date = new Date(props.post.date);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-});
+const formattedDate = computed(() => formatDate(props.post.date));
 </script>
 
 <template>
