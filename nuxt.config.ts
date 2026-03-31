@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/hints",
     "@nuxt/image",
     "@nuxt/test-utils",
+    "@vercel/speed-insights",
   ],
   vite: {
     plugins: [tailwindcss()],
