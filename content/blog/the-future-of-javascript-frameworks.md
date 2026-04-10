@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/the-future-of-javascript-frameworks"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Vue", "React", "Angular"]
+  description: "Where JavaScript frameworks are headed — signals, server components, partial hydration, and what Vue, React, and Svelte are converging on."
+  keywords: ["JavaScript Frameworks", "Vue", "React", "Svelte", "Frontend"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

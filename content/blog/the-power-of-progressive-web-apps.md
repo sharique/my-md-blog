@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/the-power-of-progressive-web-apps"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["JavaScript", "Web Development", "Frontend"]
+  description: "How Progressive Web Apps bring app-like experiences to the browser — service workers, offline support, push notifications, and installability."
+  keywords: ["PWA", "Progressive Web Apps", "Service Workers", "Offline", "Mobile"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

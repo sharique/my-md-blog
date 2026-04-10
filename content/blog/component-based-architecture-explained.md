@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/component-based-architecture-explained"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Vue", "React", "Angular"]
+  description: "A deep dive into component-based UI architecture — how to think in components, manage props and state, and build reusable UI across Vue, React, and Angular."
+  keywords: ["Components", "Vue", "React", "Frontend Architecture", "UI"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/accessibility-in-web-development"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Testing", "Quality Assurance", "Development"]
+  description: "A practical guide to building accessible web applications — covering ARIA roles, semantic HTML, keyboard navigation, and inclusive design principles."
+  keywords: ["Accessibility", "ARIA", "Inclusive Design", "Web Standards", "a11y"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

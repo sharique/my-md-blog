@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/cloud-computing-essentials"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Performance", "Optimization", "SEO"]
+  description: "An introduction to cloud computing fundamentals — covering IaaS, PaaS, SaaS, major cloud providers, and how to choose the right deployment model."
+  keywords: ["Cloud Computing", "AWS", "Infrastructure", "DevOps", "IaaS"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

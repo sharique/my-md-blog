@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/api-development-guidelines"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["TypeScript", "Programming", "Best Practices"]
+  description: "Best practices for designing and building reliable APIs — covering REST conventions, versioning, error handling, and documentation."
+  keywords: ["API Design", "REST", "Backend Development", "Best Practices", "HTTP"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

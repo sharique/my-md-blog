@@ -8,18 +8,17 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 
 const formattedDate = computed(() => formatDate(post.value?.date));
 
-useHead({
-  title: () => post.value?.title || "Content not found",
-  meta: [
-    {
-      name: "description",
-      content: post.value?.seo.description || "No description available",
-    },
-    {
-      name: "keywords",
-      content: post.value?.seo.keywords.join(",") || [],
-    },
-  ],
+useSeoMeta({
+  title: () => post.value?.title || "Post not found",
+  description: () => post.value?.seo?.description || post.value?.summary || "",
+  keywords: () => post.value?.seo?.keywords?.join(",") || "",
+  ogTitle: () => post.value?.title || "",
+  ogDescription: () => post.value?.seo?.description || post.value?.summary || "",
+  ogImage: () => post.value?.seo?.["og:image"] || "",
+  ogType: "article",
+  twitterCard: "summary_large_image",
+  twitterTitle: () => post.value?.title || "",
+  twitterDescription: () => post.value?.seo?.description || post.value?.summary || "",
 });
 </script>
 

@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/graphql-vs-rest-apis"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["DevOps", "Deployment", "CI/CD"]
+  description: "A practical comparison of GraphQL and REST — when to use each, key trade-offs around flexibility, caching, tooling, and team conventions."
+  keywords: ["GraphQL", "REST API", "API Design", "Backend", "Query Language"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

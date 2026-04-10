@@ -18,7 +18,8 @@ A markdown-powered blog built with Nuxt 4 and Nuxt content module. Articles are 
 - Zod-validated frontmatter schema (title, date, summary, tags, status)
 - Draft posts excluded from listing (only `status: published` posts shown)
 - Responsive layout with a study-desk hero illustration on the home page
-- SEO-ready frontmatter (`seo.description`, `seo.keywords`, `og:image`)
+- Open Graph + Twitter Card meta tags on every page (via `useSeoMeta`)
+- Per-post SEO frontmatter (`seo.description`, `seo.keywords`, `og:image`)
 
 ## Commands
 
@@ -44,12 +45,16 @@ summary: "Short summary"  # required
 tags: ["Tag1", "Tag2"]    # optional
 author: "Name"            # optional
 status: "published"       # "draft" | "published" (defaults to draft)
+seo:                      # optional — used for OG/Twitter meta tags
+  description: "..."
+  keywords: ["kw1", "kw2"]
+  og:image: "https://example.com/cover.jpg"
 ```
 
 ## Planned
 
 - [ ] Sitemap (`/sitemap.xml`) via `@nuxtjs/sitemap`
-- [ ] Social sharing Open Graph tags per post
+- [x] Social sharing Open Graph tags per post
 - [ ] Design improvements (typography, spacing, component polish)
 
 ## Project Structure

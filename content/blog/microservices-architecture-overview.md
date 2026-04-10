@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/microservices-architecture-overview"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["JavaScript", "Web Development", "Frontend"]
+  description: "An overview of microservices architecture — service decomposition, inter-service communication, API gateways, and trade-offs vs monoliths."
+  keywords: ["Microservices", "Architecture", "Distributed Systems", "API Gateway", "Backend"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

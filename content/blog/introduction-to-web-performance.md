@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/introduction-to-web-performance"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Testing", "Quality Assurance", "Development"]
+  description: "Core concepts for making web pages fast — Core Web Vitals, lazy loading, code splitting, image optimization, and measuring with Lighthouse."
+  keywords: ["Web Performance", "Core Web Vitals", "Optimization", "Lighthouse", "Speed"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

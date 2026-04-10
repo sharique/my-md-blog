@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/understanding-modern-web-development"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["JavaScript", "Web Development", "Frontend"]
+  description: "A broad overview of the modern web development landscape — tooling, frameworks, the JAMstack, and how front-end and back-end have evolved."
+  keywords: ["Web Development", "JavaScript", "JAMstack", "Frontend", "Modern Web"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

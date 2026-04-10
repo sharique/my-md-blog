@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/mastering-css-grid-and-flexbox"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["CSS", "Design", "UI/UX"]
+  description: "A hands-on guide to CSS layout with Grid and Flexbox — when to use each, alignment tricks, responsive patterns, and common pitfalls."
+  keywords: ["CSS Grid", "Flexbox", "CSS Layout", "Responsive Design", "UI"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

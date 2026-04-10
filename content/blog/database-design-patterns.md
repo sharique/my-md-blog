@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/database-design-patterns"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Vue", "React", "Angular"]
+  description: "Core database design patterns every developer should know — normalization, indexing strategies, ORMs, and when to choose SQL vs NoSQL."
+  keywords: ["Database Design", "SQL", "NoSQL", "Data Modeling", "Indexing"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

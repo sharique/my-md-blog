@@ -5,8 +5,11 @@ const { data: latestPosts } = await useAsyncData("latest-posts", () => {
 
 useSeoMeta({
   title: "My Blog - Home",
-  description:
-    "Welcome to my blog. A showcase of Vue.js and Nuxt.js skills, powered by Markdown.",
+  description: "Welcome to my blog. A showcase of Vue.js and Nuxt.js skills, powered by Markdown.",
+  ogTitle: "My Blog - Home",
+  ogDescription: "Welcome to my blog. A showcase of Vue.js and Nuxt.js skills, powered by Markdown.",
+  ogType: "website",
+  twitterCard: "summary",
 });
 </script>
 

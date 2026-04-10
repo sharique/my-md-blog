@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/testing-strategies-for-modern-apps"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Performance", "Optimization", "SEO"]
+  description: "A comprehensive guide to testing modern web apps — unit tests, integration tests, end-to-end tests, and how to balance coverage with confidence."
+  keywords: ["Testing", "Vitest", "Unit Testing", "TDD", "End-to-End Testing"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/reactive-programming-concepts"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["DevOps", "Deployment", "CI/CD"]
+  description: "An introduction to reactive programming — observables, streams, operators, and how RxJS brings reactive patterns to JavaScript."
+  keywords: ["Reactive Programming", "RxJS", "Observables", "JavaScript", "Streams"]
 ---
 
 

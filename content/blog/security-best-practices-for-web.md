@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/security-best-practices-for-web"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["CSS", "Design", "UI/UX"]
+  description: "Essential web security practices — preventing XSS, CSRF, SQL injection, securing authentication flows, and following OWASP guidelines."
+  keywords: ["Web Security", "OWASP", "XSS", "Authentication", "CSRF"]
 ---
 
 

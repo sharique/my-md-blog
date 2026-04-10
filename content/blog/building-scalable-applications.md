@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/building-scalable-applications"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["TypeScript", "Programming", "Best Practices"]
+  description: "How to architect web applications that scale — covering load balancing, caching strategies, database sharding, and microservices patterns."
+  keywords: ["Scalability", "System Design", "Architecture", "Performance", "Backend"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

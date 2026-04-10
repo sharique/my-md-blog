@@ -20,6 +20,10 @@ const goToPage = (page: number) => {
 useSeoMeta({
   title: "Blogs home page",
   description: "This is my personal blog",
+  ogTitle: "Blogs home page",
+  ogDescription: "This is my personal blog",
+  ogType: "website",
+  twitterCard: "summary",
 });
 </script>
 

@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/state-management-best-practices"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["TypeScript", "Programming", "Best Practices"]
+  description: "How to manage application state effectively — comparing Pinia, Vuex, and reactive composables, with patterns for avoiding common pitfalls."
+  keywords: ["State Management", "Pinia", "Vuex", "Vue", "Frontend"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

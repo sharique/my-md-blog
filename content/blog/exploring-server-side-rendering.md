@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/exploring-server-side-rendering"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["API", "Backend", "Architecture"]
+  description: "What server-side rendering is, why it matters for SEO and performance, and how frameworks like Nuxt and Next.js implement SSR under the hood."
+  keywords: ["SSR", "Server-Side Rendering", "Nuxt", "Next.js", "Performance"]
 ---
 
 

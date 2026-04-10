@@ -8,8 +8,8 @@ author: "Sharique"
 status: "published"
 url: "/blog/deep-dive-into-typescript"
 seo:
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru"
-  keywords: ["Performance", "Optimization", "SEO"]
+  description: "A comprehensive look at TypeScript's type system — generics, utility types, discriminated unions, and patterns for writing safer, more maintainable code."
+  keywords: ["TypeScript", "JavaScript", "Type Safety", "Generics", "Programming"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
