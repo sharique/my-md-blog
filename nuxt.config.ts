@@ -15,7 +15,17 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/test-utils",
     "@vercel/speed-insights",
+    "@nuxtjs/sitemap",
   ],
+
+  site: {
+    url: "https://my-md-blog.vercel.app", // override with NUXT_PUBLIC_SITE_URL env var
+    name: "My MD Blog",
+  },
+
+  sitemap: {
+    sources: ["/api/__sitemap__/urls"],
+  },
   vite: {
     plugins: [tailwindcss()],
   },

@@ -20,6 +20,7 @@ A markdown-powered blog built with Nuxt 4 and Nuxt content module. Articles are 
 - Responsive layout with a study-desk hero illustration on the home page
 - Open Graph + Twitter Card meta tags on every page (via `useSeoMeta`)
 - Per-post SEO frontmatter (`seo.description`, `seo.keywords`, `og:image`)
+- Auto-generated `sitemap.xml` via `@nuxtjs/sitemap` (only published posts included)
 
 ## Commands
 
@@ -53,7 +54,7 @@ seo:                      # optional — used for OG/Twitter meta tags
 
 ## Planned
 
-- [ ] Sitemap (`/sitemap.xml`) via `@nuxtjs/sitemap`
+- [x] Sitemap (`/sitemap.xml`) via `@nuxtjs/sitemap`
 - [x] Social sharing Open Graph tags per post
 - [ ] Design improvements (typography, spacing, component polish)
 
@@ -67,4 +68,7 @@ app/
   composables/    # useTheme.ts, usePagination.ts
 content/
   blog/           # Markdown blog posts
+server/
+  api/
+    __sitemap__/  # Dynamic sitemap source endpoint
 ```
