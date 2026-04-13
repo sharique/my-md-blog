@@ -23,6 +23,18 @@ export default defineNuxtConfig({
     name: "My MD Blog",
   },
 
+  // runtimeConfig.public values are exposed to both server and client.
+  // They can be overridden at runtime via environment variables:
+  //   NUXT_PUBLIC_SITE_NAME, NUXT_PUBLIC_SITE_TAGLINE, NUXT_PUBLIC_SITE_URL
+  // Nuxt auto-maps: runtimeConfig.public.siteName → NUXT_PUBLIC_SITE_NAME
+  runtimeConfig: {
+    public: {
+      siteName: "My Blog",
+      siteTagline: "Thoughts on web development & code.",
+      siteUrl: "https://my-md-blog.vercel.app",
+    },
+  },
+
   sitemap: {
     sources: ["/api/__sitemap__/urls"],
   },
