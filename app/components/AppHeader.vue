@@ -1,3 +1,9 @@
+<script setup lang="ts">
+// useRuntimeConfig() is auto-imported by Nuxt.
+// .public contains values accessible on both server and client.
+const { public: config } = useRuntimeConfig();
+</script>
+
 <template>
   <div class="navbar bg-base-200/80 backdrop-blur-sm sticky top-0 z-50 border-b border-base-300/50">
     <div class="navbar-start">
@@ -33,7 +39,7 @@
         class="btn btn-ghost text-xl tracking-tight"
         style="font-family: var(--font-serif); font-weight: 700;"
       >
-        My Blog
+        {{ config.siteName }}
       </NuxtLink>
     </div>
     <!-- Desktop nav links -->

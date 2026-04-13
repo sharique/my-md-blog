@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const currentYear = new Date().getFullYear();
+
+// useRuntimeConfig() is auto-imported by Nuxt. Destructure .public to access
+// client-safe config values that can be overridden via env vars.
+const { public: config } = useRuntimeConfig();
 </script>
 
 <template>
@@ -11,13 +15,13 @@ const currentYear = new Date().getFullYear();
             class="text-lg font-bold mb-1"
             style="font-family: var(--font-serif);"
           >
-            My Blog
+            {{ config.siteName }}
           </p>
           <p
             class="text-sm text-base-content/60"
             style="font-family: var(--font-sans);"
           >
-            Thoughts on web development &amp; code.
+            {{ config.siteTagline }}
           </p>
         </div>
         <nav class="flex gap-6" style="font-family: var(--font-sans);">
@@ -41,7 +45,7 @@ const currentYear = new Date().getFullYear();
         class="text-center text-xs text-base-content/50"
         style="font-family: var(--font-sans);"
       >
-        &copy; {{ currentYear }} My Blog. All rights reserved.
+        &copy; {{ currentYear }} {{ config.siteName }}. All rights reserved.
       </p>
     </div>
   </footer>

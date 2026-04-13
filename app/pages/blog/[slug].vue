@@ -1,12 +1,19 @@
 <script setup>
 import { formatDate } from "~/utils/formatDate";
 
-const slug = useRoute().params.slug;
+// Reuse route for both the slug lookup and building the share URL.
+const route = useRoute();
+const slug = route.params.slug;
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
   return queryCollection("blog").path(`/blog/${slug}`).first();
 });
 
 const formattedDate = computed(() => formatDate(post.value?.date));
+
+// Build the canonical URL for this post — used by the SocialShare component.
+// useRuntimeConfig() is auto-imported by Nuxt.
+const { public: config } = useRuntimeConfig();
+const postUrl = computed(() => `${config.siteUrl}${route.path}`);
 
 useSeoMeta({
   title: () => post.value?.title || "Post not found",
@@ -49,7 +56,7 @@ useSeoMeta({
       <div class="editorial-divider mb-6">
         <span/>
       </div>
-      <div class="flex flex-wrap items-center gap-2">
+      <div class="flex flex-wrap items-center gap-2 mb-6">
         <span
           class="text-sm font-semibold text-base-content/70 mr-1"
           style="font-family: var(--font-sans);"
@@ -64,6 +71,12 @@ useSeoMeta({
           {{ tag }}
         </span>
       </div>
+
+      <!-- Social sharing buttons — SocialShare is auto-imported by Nuxt -->
+      <SocialShare
+        :title="post.title"
+        :url="postUrl"
+      />
     </footer>
   </article>
 </template>
