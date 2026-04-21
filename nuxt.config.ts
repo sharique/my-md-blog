@@ -18,15 +18,13 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
   ],
 
+  // Used by @nuxtjs/sitemap to build <loc> URLs. Override via NUXT_PUBLIC_SITE_URL.
   site: {
-    url: "https://my-md-blog.vercel.app", // override with NUXT_PUBLIC_SITE_URL env var
-    name: "My MD Blog",
+    url: "https://my-md-blog.vercel.app",
   },
 
-  // runtimeConfig.public values are exposed to both server and client.
-  // They can be overridden at runtime via environment variables:
-  //   NUXT_PUBLIC_SITE_NAME, NUXT_PUBLIC_SITE_TAGLINE, NUXT_PUBLIC_SITE_URL
-  // Nuxt auto-maps: runtimeConfig.public.siteName → NUXT_PUBLIC_SITE_NAME
+  // Single source of truth for site config in components.
+  // Nuxt auto-maps: runtimeConfig.public.siteName → NUXT_PUBLIC_SITE_NAME, etc.
   runtimeConfig: {
     public: {
       siteName: "My Blog",
