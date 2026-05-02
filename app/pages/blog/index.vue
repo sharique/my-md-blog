@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { usePagination } from "~/composables/usePagination";
+import { readingTime } from "~/utils/readingTime";
 
 const route = useRoute();
 const currentPage = ref(parseInt(route.query.page as string) || 1);
@@ -43,7 +44,7 @@ useSeoMeta({
         class="animate-fade-in-up"
         :class="`animate-delay-${Math.min(index + 1, 5)}`"
       >
-        <BlogTeaser :post="post" />
+        <BlogTeaser :post="post" :read-time="readingTime(post.body)" />
       </li>
     </ul>
 

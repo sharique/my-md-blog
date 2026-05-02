@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { readingTime } from "~/utils/readingTime";
+
 const { data: latestPosts } = await useAsyncData("latest-posts", () => {
   return queryCollection("blog").order("date", "DESC").limit(3).all();
 });
@@ -61,6 +63,7 @@ useSeoMeta({
           v-for="(post, index) in latestPosts"
           :key="post.id"
           :post="post"
+          :read-time="readingTime(post.body)"
           class="animate-fade-in-up"
           :class="`animate-delay-${index + 2}`"
         />

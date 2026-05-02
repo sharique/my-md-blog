@@ -11,6 +11,7 @@ const props = defineProps<{
     summary: string;
     tags?: string[];
   };
+  readTime?: string;
 }>();
 
 const formattedDate = computed(() => formatDate(props.post.date));
@@ -35,6 +36,10 @@ const formattedDate = computed(() => formatDate(props.post.date));
         {{ formattedDate }}
         <span class="mx-1">&middot;</span>
         {{ post.author }}
+        <template v-if="readTime">
+          <span class="mx-1">&middot;</span>
+          {{ readTime }}
+        </template>
       </span>
       <p
         class="py-3 text-base-content/80 leading-relaxed"
