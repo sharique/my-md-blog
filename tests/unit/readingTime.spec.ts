@@ -86,3 +86,48 @@ describe("readingTime", () => {
     expect(readingTime(root(paragraph(words(10))), 1000)).toBe("1 min read");
   });
 });
+
+// Minimark format — the actual format Nuxt Content v3 stores in SQLite:
+// { type: "minimark", value: [["tag", props, ...children], ...] }
+// Text leaves are plain strings inside the tuple, not { type: "text", value } objects.
+function mm(...nodes: unknown[]) {
+  return { type: "minimark", value: nodes };
+}
+function mmP(text: string) {
+  return ["p", {}, text];
+}
+function mmUl(...items: string[]) {
+  return ["ul", {}, ...items.map((t) => ["li", {}, t])];
+}
+
+describe("readingTime — minimark format", () => {
+  it("returns '1 min read' for an empty minimark body", () => {
+    expect(readingTime(mm())).toBe("1 min read");
+  });
+
+  it("returns '1 min read' for fewer than 200 words", () => {
+    expect(readingTime(mm(mmP(words(50))))).toBe("1 min read");
+  });
+
+  it("returns '1 min read' for exactly 200 words", () => {
+    expect(readingTime(mm(mmP(words(200))))).toBe("1 min read");
+  });
+
+  it("returns '2 mins read' for 201 words", () => {
+    expect(readingTime(mm(mmP(words(201))))).toBe("2 mins read");
+  });
+
+  it("counts words across multiple minimark paragraphs", () => {
+    expect(readingTime(mm(mmP(words(150)), mmP(words(150))))).toBe("2 mins read");
+  });
+
+  it("counts words in minimark list items", () => {
+    const items = Array.from({ length: 201 }, (_, i) => `word${i}`);
+    expect(readingTime(mm(mmUl(...items)))).toBe("2 mins read");
+  });
+
+  it("counts words in nested minimark tuples", () => {
+    const blockquote = ["blockquote", {}, ["p", {}, words(201)]];
+    expect(readingTime(mm(blockquote))).toBe("2 mins read");
+  });
+});

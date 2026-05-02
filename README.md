@@ -1,4 +1,4 @@
-# My MD Blog
+# Folio
 
 A markdown-powered blog built with Nuxt 4 and the Nuxt Content module. Articles are written as `.md` files and rendered automatically. Deployed to Vercel as a fully static site.
 
@@ -46,7 +46,7 @@ npx eslint --fix . # Auto-fix lint warnings
 Copy `.env.example` to `.env` and customise:
 
 ```bash
-NUXT_PUBLIC_SITE_NAME="My Blog"
+NUXT_PUBLIC_SITE_NAME="Folio"
 NUXT_PUBLIC_SITE_TAGLINE="Thoughts on web development & code."
 NUXT_PUBLIC_SITE_URL="http://localhost:3000"
 ```

@@ -9,7 +9,7 @@
     </h2>
     <div class="prose max-w-none" style="font-family: var(--font-sans);">
       <p>
-        A lightweight, markdown-powered blog built with Nuxt 4. Write
+        Folio is a lightweight, markdown-powered blog built with Nuxt 4. Write
         your posts in Markdown, and the site takes care of the rest —
         rendering, routing, styling, and SEO are all handled automatically.
       </p>

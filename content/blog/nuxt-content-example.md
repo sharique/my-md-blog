@@ -1,5 +1,5 @@
 ---
-title: "Getting Started MD Blog"
+title: "Getting Started with Folio"
 date: 2026-3-22
 slug: "nuxt-content-example"
 summary: "A practical walkthrough of how this blog works — writing posts in Markdown, the frontmatter schema, and how SEO and Open Graph tags are generated automatically from post metadata."
@@ -11,7 +11,7 @@ seo:
   keywords: ["Nuxt Content", "Markdown blog", "Open Graph", "useSeoMeta", "frontmatter"]
 ---
 
-This post walks through how this blog is built — how posts are written, what the frontmatter schema looks like, and how SEO and social sharing tags are generated automatically for every post.
+This post walks through how Folio is built — how posts are written, what the frontmatter schema looks like, and how SEO and social sharing tags are generated automatically for every post.
 
 ## Writing a Post
 

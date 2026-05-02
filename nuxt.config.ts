@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   // Nuxt auto-maps: runtimeConfig.public.siteName → NUXT_PUBLIC_SITE_NAME, etc.
   runtimeConfig: {
     public: {
-      siteName: "My Blog",
+      siteName: "Folio",
       siteTagline: "Thoughts on web development & code.",
       siteUrl: "https://my-md-blog.vercel.app",
     },

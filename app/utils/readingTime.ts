@@ -1,36 +1,41 @@
-/**
- * Recursively extracts plain text from a Nuxt Content v3 body AST node.
- * The body is a tree of { type, value?, children? } nodes.
- */
-
-function extractText(node: Record<string, unknown>): string {
-  if (node.type === "text" && typeof node.value === "string") {
-    return node.value;
+function extractText(node: unknown): string {
+  if (node !== null && typeof node === "object" && !Array.isArray(node)) {
+    const obj = node as Record<string, unknown>;
+    // Minimark format: { type: "minimark", value: [...tuples] }
+    if (Array.isArray(obj.value)) {
+      return obj.value.map(extractText).join(" ");
+    }
+    // MDC AST text node: { type: "text", value: "string" }
+    if (obj.type === "text" && typeof obj.value === "string") {
+      return obj.value;
+    }
+    // MDC AST element/root: { children: [...] }
+    if (Array.isArray(obj.children)) {
+      return (obj.children as unknown[]).map(extractText).join(" ");
+    }
+    return "";
   }
 
-  if (Array.isArray(node.children)) {
-    return (node.children as Record<string, unknown>[])
-      .map(extractText)
-      .join(" ");
+  // Minimark tuple: [tag, props, ...children]
+  if (Array.isArray(node)) {
+    return node.slice(2).map(extractText).join(" ");
   }
-  return " ";
+
+  // Text leaf inside a minimark tuple
+  if (typeof node === "string") {
+    return node;
+  }
+
+  return "";
 }
 
-/**
- * Estimates reading time from a Nuxt Content v3 body AST.
- * Returns a string like "3 min read".
- *
- * @param body - The post.body object from queryCollection()
- * @param wordsPerMinute - Reading speed, defaults to 200 wpm
- */
 export function readingTime(
-  body: Record<string, unknown> | null | undefined,
+  body: unknown,
   wordsPerMinute = 200,
 ): string {
   if (!body) return "1 min read";
   const text = extractText(body);
-  const workCount = text.trim().split(/\s+/).filter(Boolean).length;
-  const minutes = Math.max(1, Math.ceil(workCount / wordsPerMinute));
-
+  const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
   return `${minutes} ${minutes === 1 ? "min" : "mins"} read`;
 }

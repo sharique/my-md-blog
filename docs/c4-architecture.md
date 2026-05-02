@@ -1,4 +1,4 @@
-# C4 Architecture Diagrams — My MD Blog
+# C4 Architecture Diagrams — Folio
 
 ---
 
@@ -6,11 +6,11 @@
 
 ```mermaid
 C4Context
-  title System Context — My MD Blog
+  title System Context — Folio
 
   Person(reader, "Blog Reader", "Visits the blog to read articles")
 
-  System(blog, "My MD Blog", "Markdown-powered blog built with Nuxt 4. Serves blog posts written as .md files.")
+  System(blog, "Folio", "Markdown-powered blog built with Nuxt 4. Serves blog posts written as .md files.")
 
   System_Ext(github_pages, "GitHub Pages", "Hosts the statically generated site")
   System_Ext(google_fonts, "Google Fonts", "Serves Playfair Display and Source Sans 3 typefaces")
@@ -28,11 +28,11 @@ C4Context
 
 ```mermaid
 C4Container
-  title Container Diagram — My MD Blog
+  title Container Diagram — Folio
 
   Person(reader, "Blog Reader")
 
-  System_Boundary(blog, "My MD Blog") {
+  System_Boundary(blog, "Folio") {
     Container(nuxt_app, "Nuxt 4 App", "Vue 3 / Nuxt 4", "File-based routing, SSG, component rendering")
     Container(content_store, "Content Store", "Markdown (.md files)", "Blog posts in content/blog/ with Zod-validated frontmatter")
     ContainerDb(sqlite_db, "SQLite Index", "better-sqlite3", "Built by @nuxt/content at build time; powers queryCollection()")
