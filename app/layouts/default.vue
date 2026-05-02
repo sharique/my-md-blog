@@ -16,5 +16,6 @@ import AppFooter from "~/components/AppFooter.vue";
     </div>
 
     <AppFooter />
+    <ScrollToTop />
   </div>
 </template>

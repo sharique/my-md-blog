@@ -24,6 +24,8 @@ A markdown-powered blog built with Nuxt 4 and the Nuxt Content module. Articles 
 - Auto-generated `sitemap.xml` via `@nuxtjs/sitemap` (published posts only)
 - RSS feed at `/rss.xml` (published posts only)
 - Site name, tagline, and URL configurable via environment variables
+- Reading time estimate on post cards and post header (AST word count, 200 wpm)
+- Scroll-to-top floating button (fades in after 300px, smooth scroll, passive listener)
 
 ## Commands
 
@@ -70,10 +72,10 @@ seo:                      # optional — used for OG/Twitter meta tags
 
 ## Planned
 
-- [ ] Reading time estimate on post cards and post header
-- [ ] Scroll-to-top floating button
+- [x] Scroll-to-top floating button
 - [ ] Tag pages (`/blog/tag/[tag]`) with clickable tag pills
 - [x] RSS feed improvements (already live at `/rss.xml`)
+- [x] Reading time estimate on post cards and post header
 
 ## Project Structure
 
@@ -84,6 +86,7 @@ app/
                   # StudyDeskHero, SocialShare
   layouts/        # default.vue — 1200px centered container
   composables/    # useTheme.ts, usePagination.ts
+  utils/          # formatDate.ts, readingTime.ts
 content/
   blog/           # Markdown blog posts
 server/
