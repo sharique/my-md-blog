@@ -8,7 +8,7 @@ const { theme, toggleTheme } = useTheme();
       type="checkbox"
       :checked="theme === 'dark'"
       @change="toggleTheme()"
-    />
+    >
     <!-- sun icon -->
     <svg
       class="swap-off h-6 w-6 fill-current"

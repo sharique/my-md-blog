@@ -1,5 +1,5 @@
 export default defineNitroPlugin((nitroApp) => {
-  nitroApp.hooks.hook("render:html", (html, { event }) => {
+  nitroApp.hooks.hook("render:html", (_html, { event: _event }) => {
     // This will be an object representation of the html template.
     // console.log(html);
     // html.head.push(
@@ -7,7 +7,7 @@ export default defineNitroPlugin((nitroApp) => {
     // );
   });
   // You can also intercept the response here.
-  nitroApp.hooks.hook("render:response", (response, { event }) => {
+  nitroApp.hooks.hook("render:response", (_response, { event: _event }) => {
     // console.log(response);
   });
 });

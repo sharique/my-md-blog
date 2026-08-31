@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ["./app/tailwind.css"],
+  css: ["~/tailwind.css"],
   content: {
     build: {
       markdown: {
